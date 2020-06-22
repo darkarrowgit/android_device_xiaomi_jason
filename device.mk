@@ -146,8 +146,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.panel_info.sh \
-    init.device.rc \
-    fstab.qcom
+    init.device.rc
 
 # Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
