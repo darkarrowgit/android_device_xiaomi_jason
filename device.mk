@@ -48,17 +48,15 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_PACKAGES += \
     libspkrprot
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
-    $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
-
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.spkr.cal.duration=100 \
     persist.vendor.audio.speaker.prot.enable=true \
     persist.vendor.audio.spv3.enable=true \
     persist.vendor.audio.avs.afe_api_version=2
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
